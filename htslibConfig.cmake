@@ -3,7 +3,7 @@
 ########################################################################
 
 project(htslib CXX C)
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 2.8)
 
 # project version
 set(htslib_MAJOR_VERSION 1)
