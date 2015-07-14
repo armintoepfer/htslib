@@ -75,3 +75,10 @@ set(HTSLIB_LIBRARIES
     "${PROJECT_NAME}: Libraries"
     FORCE
 )
+
+set(HTSLIB_LIBRARIES_VERSIONED_LINK
+    ${htslib_LibDir}/libhts.1${PB_LIB_SUFFIX}
+    CACHE INTERNAL
+    ""
+    FORCE
+)
