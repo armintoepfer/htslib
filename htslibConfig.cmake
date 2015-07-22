@@ -76,9 +76,20 @@ set(HTSLIB_LIBRARIES
     FORCE
 )
 
-set(HTSLIB_LIBRARIES_VERSIONED_LINK
-    ${htslib_LibDir}/libhts.1${PB_LIB_SUFFIX}
-    CACHE INTERNAL
-    ""
-    FORCE
-)
+if(APPLE)
+    # e.g. libhts.1.dylib
+    set(HTSLIB_LIBRARIES_VERSIONED_LINK
+        ${htslib_LibDir}/libhts.1${PB_LIB_SUFFIX}
+        CACHE INTERNAL
+        ""
+        FORCE
+    )
+else()
+    # e.g. libhts.so.1
+    set(HTSLIB_LIBRARIES_VERSIONED_LINK
+        ${htslib_LibDir}/libhts${PB_LIB_SUFFIX}.1
+        CACHE INTERNAL
+        ""
+        FORCE
+    )
+endif()
