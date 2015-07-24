@@ -79,7 +79,7 @@ set(HTSLIB_LIBRARIES
 if(APPLE)
     # e.g. libhts.1.dylib
     set(HTSLIB_LIBRARIES_VERSIONED_LINK
-        ${htslib_LibDir}/libhts.1${PB_LIB_SUFFIX}
+        ${htslib_LibDir}/libhts.1${CMAKE_SHARED_LIBRARY_SUFFIX}
         CACHE INTERNAL
         ""
         FORCE
@@ -87,7 +87,7 @@ if(APPLE)
 else()
     # e.g. libhts.so.1
     set(HTSLIB_LIBRARIES_VERSIONED_LINK
-        ${htslib_LibDir}/libhts${PB_LIB_SUFFIX}.1
+        ${htslib_LibDir}/libhts${CMAKE_SHARED_LIBRARY_SUFFIX}.1
         CACHE INTERNAL
         ""
         FORCE
