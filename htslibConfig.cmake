@@ -2,15 +2,13 @@
 # CMake build script for htslib library.
 ########################################################################
 
-project(htslib CXX C)
-cmake_minimum_required(VERSION 2.8)
+cmake_policy(SET CMP0048 NEW)  # lets us set version in project()
+project(htslib VERSION 1.0.0 LANGUAGES CXX C)
+cmake_minimum_required(VERSION 3.0)
 
 # project version
-set(htslib_MAJOR_VERSION 1)
-set(htslib_MINOR_VERSION 0)
-set(htslib_PATCH_VERSION 0)
 set(htslib_VERSION
-  "${htslib_MAJOR_VERSION}.${htslib_MINOR_VERSION}.${htslib_PATCH_VERSION}"
+  "${htslib_VERSION_MAJOR}.${htslib_VERSION_MINOR}.${htslib_VERSION_PATCH}"
 )
 
 # build-time options
