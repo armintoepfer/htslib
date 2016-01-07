@@ -1,0 +1,16 @@
+*.o
+lib*.so
+lib*.a
+*.pico
+bgzip
+htsfile
+libhts.so.1
+tabix
+test/fieldarith
+test/hfile
+test/sam
+test/test-regidx
+test/test-vcf-api
+test/test-vcf-sweep
+test/test_view
+version.h
